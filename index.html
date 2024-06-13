@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de vida de Egresados</title>
+    <link rel="icon" href="https://i.imgur.com/kGVe72R.png" type="image/png">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Syabil&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+    <center>
+        <img src="https://i.postimg.cc/0rRDr5tq/logo-corporacion.png" width="30%;" > 
+        <img src="https://i.postimg.cc/G2bcLWPS/logo-de-bienestar.png" width="15%;">   
+        <h2>HOJA DE VIDA UNICA DE EGRESADOS</h2>
+        <div class="section">
+            <CENTER>
+            <h4>SISTEMA DE GESTION DE CALIDAD</h4>
+            </CENTER>
+            <label for="photo">Foto:</label>
+           <br>
+           <br>
+            <div class="photo-placeholder" id="photo-preview"></div>
+            <input type="file" id="photo" name="photo" accept="image/*" onchange="previewPhoto()">
+     
+            <script>
+                function previewPhoto() {
+                    var fileInput = document.getElementById('photo');
+                    var file = fileInput.files[0];
+                    var reader = new FileReader();
+            
+                    reader.onload = function(e) {
+                        var preview = document.getElementById('photo-preview');
+                        preview.innerHTML = '';
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.maxWidth = '100%';
+                        img.style.maxHeight = '100%';
+                        preview.appendChild(img);
+                    }
+            
+                    if (file) {
+                        reader.readAsDataURL(file);
+                    }
+                }
+            </script>
+            <br>
+            <CENTER>
+            <h4>DATOS PERSONALES</h4>
+            </CENTER>
+            <div class="container">
+            <label for="name">Nombre y Apellidos:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="document-type">Tipo de Documento:</label>
+            <select id="document-type" name="document-type">
+                <option value="TI.">TI.</option>
+                <option value="CC.">CC.</option>
+                <option value="Pte.">Pte.</option>
+                <option value="PPT.">PPT.</option>
+
+            <label for="document-number">Número de Documento:</label>
+            <input type="text" id="document-number" placeholder="digite su numero de documeto" required><br>
+
+            <label for="nationality">Nacionalidad:</label>
+            <select id="nationality" name="nationality">
+            <option value="Colombiana">Colombiana</option>
+            <option value="Venezolana">Venezolana</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brasileña">Brasileña</option>
+            <option value="Chilena">Chilena</option>
+            <option value="Otro">Otro</option>
+            </select>
+            
+            <label for="phone">Teléfono:</label>
+            <input type="text" id="phone" name="phone"><br>
+            
+            <label for="address">Dirección:</label>
+            <input type="text" id="address" name="address"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+
+
+          <div class="section">
+                <h4>FORMACION ACADEMICA</h4>
+
+                <label for="education-level">Nivel Académico:</label>
+                <select id="education-level" name="education-level">
+                <option value="Bachillerato">Bachillerato</option>
+                <option value="Técnico Laboral">Técnico Laboral</option>
+                <option value="Tecnólogo">Tecnólogo</option>
+                <option value="Pregrado">Pregrado</option>
+                <option value="Posgrado">Posgrado</option>
+                </select>
+                </div>
+
+                <label for="semestre o años">Semestres o Años:</label>
+                <input type="text" id="semestres o años" name="semestres o años">
+    
+                <label for="año">Año:</label>
+                <input type="text" id="año" name="año">
+    
+                <label for="edu1-date">Graduado:</label>
+                <input type="text" id="edu1-date" name="edu1-date">
+    
+                <label for="edu2-title">Título Obtenido:</label>
+                <input type="text" id="edu2-title" name="edu2-title">
+         </div>
+       
+         <style>
+           
+        </style>
+    </head>
+    <body>
+        <br>
+        <h4 style="text-align: center;">Especifique la lengua que maneja y su nivel (Lee-Escribe y Habla)</h4>
+        <strong><p>(ESCRIBA SI O NO)</p></strong>
+        
+        <form id="lenguasForm">
+            <table>
+                <tr>
+                    <th rowspan="2">Tipo de Lengua</th>
+                    <th colspan="3">Habilidad</th>
+                    <th colspan="3">Nivel</th>
+                </tr>
+                <tr>
+                    <th class="habilidad">Escribe</th>
+                    <th class="habilidad">Lee</th>
+                    <th class="habilidad">Habla</th>
+                    <th class="nivel">No</th>
+                    <th class="nivel">Regular</th>
+                    <th class="nivel">Fluido</th>
+                </tr>
+                <tr>
+                    <td>Español</td>
+                    <td><input type="text" name="espanol_escribe" placeholder=></td>
+                    <td><input type="text" name="espanol_lee" placeholder=></td>
+                    <td><input type="text" name="espanol_habla" placeholder=></td>
+                    <td><input type="text" name="espanol_nivel_no" placeholder=></td>
+                    <td><input type="text" name="espanol_nivel_regular" placeholder=></td>
+                    <td><input type="text" name="espanol_nivel_fluido" placeholder=></td>
+                </tr>
+                <tr>
+                    <td>Inglés</td>
+                    <td><input type="text" name="ingles_escribe" placeholder=></td>
+                    <td><input type="text" name="ingles_lee" placeholder=></td>
+                    <td><input type="text" name="ingles_habla" placeholder=></td>
+                    <td><input type="text" name="ingles_nivel_no" placeholder=></td>
+                    <td><input type="text" name="ingles_nivel_regular" placeholder=></td>
+                    <td><input type="text" name="ingles_nivel_fluido" placeholder=></td>
+                </tr>
+                <tr>
+                    <td>Francés</td>
+                    <td><input type="text" name="frances_escribe" placeholder=></td>
+                    <td><input type="text" name="frances_lee" placeholder=></td>
+                    <td><input type="text" name="frances_habla" placeholder=></td>
+                    <td><input type="text" name="frances_nivel_no" placeholder=></td>
+                    <td><input type="text" name="frances_nivel_regular" placeholder=></td>
+                    <td><input type="text" name="frances_nivel_fluido" placeholder=></td>
+                </tr>
+                <tr>
+                    <td>Otros</td>
+                    <td><input type="text" name="otros_escribe" placeholder=></td>
+                    <td><input type="text" name="otros_lee" placeholder=></td>
+                    <td><input type="text" name="otros_habla" placeholder=></td>
+                    <td><input type="text" name="otros_nivel_no" placeholder=></td>
+                    <td><input type="text" name="otros_nivel_regular" placeholder=></td>
+                    <td><input type="text" name="otros_nivel_fluido" placeholder=></td>
+                </tr>
+            </table>
+            </div>
+    
+
+    <style>
+       
+    </style>
+</head>
+<body>
+    <br>
+<h4 style="text-align: center;">EDUCACION CONTINUA: formación complementaria para el fortalecimiento de competencias humanas y profesionales. <br>Contempla seminarios, foros, congresos, diplomados y cursos</h4><br>
+
+<form id="educacionContinuaForm">
+    <table>
+        <thead>
+            <tr>
+                <th>Tipo de Capacitación</th>
+                <th>Nombre de Formación</th>
+                <th>Entidad que Certifica</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Congreso</td>
+                <td><input type="text" name="nombre_formacion_congreso"></td>
+                <td><input type="text" name="entidad_certifica_congreso"></td>
+                <td><input type="date" name="fecha_congreso"></td>
+            </tr>
+            <tr>
+                <td>Diplomado</td>
+                <td><input type="text" name="nombre_formacion_diplomado"></td>
+                <td><input type="text" name="entidad_certifica_diplomado"></td>
+                <td><input type="date" name="fecha_diplomado"></td>
+            </tr>
+            <tr>
+                <td>Seminario</td>
+                <td><input type="text" name="nombre_formacion_seminario"></td>
+                <td><input type="text" name="entidad_certifica_seminario"></td>
+                <td><input type="date" name="fecha_seminario"></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+
+        <div class="section">
+            <h4>EXPERIENCIA LABORAL O HUMANA</h4>
+            <label for="job1-title">Nombre de la Empresa:</label>
+            <input type="text" id="job1-title" name="job1-title">
+
+            <label for="job1-company">Cargo que Ocupo:</label>
+            <input type="text" id="job1-company" name="job1-company">
+
+            <label for="job1-date">Jefe Inmediato:</label>
+            <input type="text" id="job1-date" name="job1-date">
+
+            <label for="job1-description">Tiempo que presto el Servicio:</label>
+            <textarea id="job1-description" name="job1-description"></textarea>
+
+            <label for="job2-title">Año en que lo Presto:</label>
+            <input type="text" id="job2-title" name="job2-title">
+
+            <label for="job2-company">Numero de Contacto o Correo:</label>
+            <input type="text" id="job2-company" name="job2-company">
+        </div>
+
+        <div class="section">
+            <h4>ENTIDAD QUE POSTULA</h4>
+            <label for="job1-title">Nombre de la empresa:</label>
+            <input type="text" id="job1-title" name="job1-title">
+
+            <label for="job1-company">Oficina enlace:</label>
+            <input type="text" id="job1-company" name="job1-company">
+
+            <label for="job1-date">Dirrecion de Empresa:</label>
+            <input type="text" id="job1-date" name="job1-date">
+
+            <label for="job1-description">Funcionario de Contacto:</label>
+            <textarea id="job1-description" name="job1-description"></textarea>
+
+            <label for="job2-title">Numero de Teléfono o Celular:</label>
+            <input type="text" id="job2-title" name="job2-title">
+
+            <label for="job2-company">Correo electronico de Empresa:</label>
+            <input type="text" id="job2-company" name="job2-company">
+
+            <label for="job2-company">Pagina web de Empresa:</label>
+            <input type="text" id="job2-company" name="job2-company">
+        </div><br>
+
+        <div class="section">
+            <br>
+            <h4>REFERENCIAS FAMILIARES</h4>
+            <label for="job1-title">Tipo de vinculo o Relacion:</label>
+            <input type="text" id="job1-title" name="job1-title">
+
+            <label for="job1-company">Nombre de la Persona:</label>
+            <input type="text" id="job1-company" name="job1-company">
+
+            <label for="job1-date">Dirrecion o Domicilio:</label>
+            <input type="text" id="job1-date" name="job1-date">
+
+            <label for="job1-description">A que se Dedica:</label>
+            <textarea id="job1-description" name="job1-description"></textarea>
+
+            <label for="job2-title">Numero de Teléfono o Celular:</label>
+            <input type="text" id="job2-title" name="job2-title">
+
+            <label for="job2-company">Correo electronico:</label>
+            <input type="text" id="job2-company" name="job2-company">
+        </div>
+    </div>
+</script>
+<form>
+<CENTER>
+    <p><H5>manifesto bajo la gravedad del juramento, me encuentro dentro de las casuales<br>
+        de inhabilidad e incompatibilidad del orden constitucional o legal, para prestar<br>
+        servicios de acuerdo a mis competencias o perfil ocupacional en cualquier de las<br>
+        modalidades de contratacion. para todos los efectos legales, certifico que los datos<br>
+        anotados por mi en el presente formato de hoja de vida, son veraces.</H5><br>
+    </p>
+    <input type="radio" id="si" name="respuesta" value="si">
+    <label for="si">Sí</label><br>
+    <input type="radio" id="no" name="respuesta" value="no">
+    <label for="no">No</label><br>
+</CENTER>
+<center>
+    <div id="fotofir">
+        <input type="file" accept="image/png" onchange="previewFirma(event)">
+        <img id="firma" src="" alt="Firma" class="firma">
+    </div>
+    
+    
+    <script>
+        function previewFirma(event) {
+            const input = event.target;
+            const file = input.files[0];
+    
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function() {
+                    const dataURL = reader.result;
+                    const img = document.getElementById('firma');
+                    img.src = dataURL;
+                };
+                 reader.readAsDataURL(file);
+             }
+            }
+        </script>
+  </center>
+  
+  <center>
+    <br><button id="guardar"onclick="imprimir()">GUARDAR PDF</button><br>
+    </button>
+
+    <script>
+    function imprimir() {
+        window.print(); 
+    }
+    </script>
+</div>
+</center>
+</script>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 70px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url(https://i.postimg.cc/hv7VSQ1r/foto.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+h1, h2 {
+    text-align: center;
+}
+label {
+    display: block;
+    margin-top: 6px;
+    font-weight: bold;
+}
+input, textarea {
+    width: 70%;
+    padding: 5px;
+    margin-top: 7px;
+    display: block;
+}
+
+
+.photo-placeholder {
+    border: 1px solid #000;
+    height: 170px;
+    width: 130px;
+    margin-top: 10px;
+}
+.section {
+    margin-top: 20px;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+th, td {
+    border: 1px solid black;
+    padding: 6px;
+    text-align: center;
+}
+th {
+    background-color: #f2f2f2;
+}
+.habilidad {
+    background-color: #d9e2f3;
+}
+.nivel {
+    background-color: #e2efd9;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+th, td {
+    border: 1px solid black;
+    padding: 3px;
+    text-align: center;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+
+#fotofir {
+    width: 200px;  /* Ajusta el ancho deseado */
+    height: 100px; /* Ajusta la altura deseada */
+    border: 1px solid #000; /* Opcional: para ver el borde del área de la firma */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#firma {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#guardar {
+
+font-style: italic;
+width: 140px;
+background: linear-gradient(to left,  #154360 50%, lightblue 50%);
+background-size: 200% 200%; /* Cambio aquí */
+background-position: right bottom; /* Cambio aquí */
+filter: brightness(100%);
+font-family: 'TeXGyreCursor-Regular', monospace;
+padding: 13px 0 13px;
+font-weight: bold;
+box-shadow: 0 0 30px #154360;
+text-align: center;
+transition: all 0.8s;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 25px 20px;
+border: 2px solid  #154360;
+border-radius: 5px;
+}
+
+#guardar:hover {
+
+color: rgb(0, 0, 0);
+border: 2px solid rgb(0, 0, 0);
+background-position: left bottom; /* Cambio aquí */
+transform: scale(1.2);
+transform-origin: top left;
+  
+}
+
+@media print {
+    input[type="file"], button, select, #guardar {
+        display: none;
+    } 
+}
+</style>
+</body>
+</html>
+
