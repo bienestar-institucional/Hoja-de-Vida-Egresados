@@ -24,28 +24,6 @@
            <br>
             <div class="photo-placeholder" id="photo-preview"></div>
             <input type="file" id="photo" name="photo" accept="image/*" onchange="previewPhoto()">
-     
-            <script>
-                function previewPhoto() {
-                    var fileInput = document.getElementById('photo');
-                    var file = fileInput.files[0];
-                    var reader = new FileReader();
-            
-                    reader.onload = function(e) {
-                        var preview = document.getElementById('photo-preview');
-                        preview.innerHTML = '';
-                        var img = document.createElement('img');
-                        img.src = e.target.result;
-                        img.style.maxWidth = '100%';
-                        img.style.maxHeight = '100%';
-                        preview.appendChild(img);
-                    }
-            
-                    if (file) {
-                        reader.readAsDataURL(file);
-                    }
-                }
-            </script>
             <br>
             <CENTER>
             <h4>DATOS PERSONALES</h4>
@@ -303,35 +281,11 @@
         <input type="file" accept="image/png" onchange="previewFirma(event)">
         <img id="firma" src="" alt="Firma" class="firma">
     </div>
-    
-    
-    <script>
-        function previewFirma(event) {
-            const input = event.target;
-            const file = input.files[0];
-    
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function() {
-                    const dataURL = reader.result;
-                    const img = document.getElementById('firma');
-                    img.src = dataURL;
-                };
-                 reader.readAsDataURL(file);
-             }
-            }
-        </script>
   </center>
   
   <center>
     <br><button id="guardar"onclick="imprimir()">GUARDAR PDF</button><br>
     </button>
-
-    <script>
-    function imprimir() {
-        window.print(); 
-    }
-    </script>
 </div>
 </center>
 </script>
